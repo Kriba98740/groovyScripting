@@ -1,0 +1,13 @@
+//Split at ',' - String Array 
+body="123,456,789";
+def odataFilter;
+String[] kmsUserId = body.split(",");
+odataFilter = '&$filter=';
+for(def i=0;i<kmsUserId.length;i++){
+	if(i==0){
+		odataFilter = odataFilter + "kmsUserId eq \'"+kmsUserId[i]+"\'";
+	}else{
+		odataFilter = odataFilter + " or kmsUserId eq \'"+kmsUserId[i]+"\'";
+	}
+}
+println(odataFilter);
