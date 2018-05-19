@@ -1,22 +1,21 @@
-	//Get Current DateTime
-	def dateQuery;
-	def date = new Date();
-	dateQuery = date.format("yyyy-MM-dd'T'HH:mm:ss", TimeZone.getTimeZone('Canada/Eastern'));
+//Get Current DateTime
+def dateQuery;
+def date = new Date();
+dateQuery = date.format("yyyy-MM-dd'T'HH:mm:ss", TimeZone.getTimeZone('Canada/Eastern'));
 
 
-  //Get next 15 minutes
-  def lastRunDateTime = "2018-01-01T01:00:00";
-	def newdate = new Date().parse("yyyy-MM-dd'T'HH:mm:ss", lastRunDateTime)
-	use(groovy.time.TimeCategory) {
-		def incre = newdate + 15.minutes;
-		dateQuery = incre.format("yyyy-MM-dd'T'HH:mm:ss", TimeZone.getTimeZone('Canada/Eastern'));
-		println(dateQuery);
-  } 
+//Get next 15 minutes
+def lastRunDateTime = "2018-01-01T01:00:00";
+def newdate = new Date().parse("yyyy-MM-dd'T'HH:mm:ss", lastRunDateTime)
+use(groovy.time.TimeCategory) {
+	def incre = newdate + 15.minutes;
+	dateQuery = incre.format("yyyy-MM-dd'T'HH:mm:ss", TimeZone.getTimeZone('Canada/Eastern'));
+	println(dateQuery);
+} 
   
   
-  //Date Parsing
-  Date Parsing
-  def newdate = new Date().parse("d/M/yyyy H:m:s", theDate)
+//Date Parsing
+def newdate = new Date().parse("yyyy-MM-dd'T'HH:mm:ss", theDate)
   
   
   //Date Formats
