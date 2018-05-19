@@ -1,0 +1,7 @@
+//d1:item[d1:key/text()='EmployeeId']/d1:value/text()
+
+/UpsertResponses/PerEmailUpsertResponse[editStatus/text()!='UPSERTED']/httpCode/text()
+
+//Multiple Conditions within the XPath
+/queryCompoundEmployeeResponse/CompoundEmployee[(person/employment_information/job_information/pay_grade/text()!='OPT') or 
+(person/employment_information/job_information/pay_grade/text()!='TCT')]
